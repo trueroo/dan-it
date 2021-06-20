@@ -1,0 +1,27 @@
+.text-container {
+  padding: 20px;
+  font-size: 20px;
+  width: 400px;
+  background-color: rgb(255, 99, 71);
+  margin: 10px;
+}
+
+.transparent {
+  opacity: 0.5;
+}
+
+.transparent-text {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.transparent-background {
+  background-color: rgba(255, 99, 71, 0.5);
+}
+
+.background-text {
+  position: absolute;
+  z-index: -1;
+  top: 50px;
+  width: 450px;
+  font-size: 20px;
+}
