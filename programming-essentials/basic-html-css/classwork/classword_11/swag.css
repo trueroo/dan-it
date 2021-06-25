@@ -37,8 +37,8 @@ body {
 
 .text-container {
   position: absolute;
-  bottom: 0;
-  transform: translateY(100%);
+  top: 100%;
+  transform: translateY(0);
   overflow: hidden;
   left: 0;
   padding: 10px;
@@ -48,6 +48,5 @@ body {
 }
 
 .container:hover .text-container {
-  bottom: 0;
-  transform: translateY(0);
+  transform: translateY(-100%);
 }
