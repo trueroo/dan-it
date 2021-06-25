@@ -1,0 +1,53 @@
+body {
+  padding-top: 58px;
+}
+
+.header {
+  padding: 12px 20px;
+  background: #fff;
+  width: 100vw;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 2px 4px;
+  position: fixed;
+  top: 0;
+}
+
+
+.logo-swag:hover path {
+  fill: blueviolet;
+}
+
+.text {
+  font-size: 25px;
+  line-height: 2;
+
+}
+
+.container {
+  position: relative;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px black;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  overflow: hidden;
+  left: 0;
+  padding: 10px;
+  background: orange;
+  color: #fff;
+  transition: transform linear 500ms;
+}
+
+.container:hover .text-container {
+  bottom: 0;
+  transform: translateY(0);
+}
