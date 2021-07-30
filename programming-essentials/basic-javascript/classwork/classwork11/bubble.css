@@ -1,0 +1,27 @@
+.bubble1 {
+  position: absolute;
+  cursor: pointer;
+  top: 50px;
+  right: 50px;
+}
+
+.bubble2 {
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
+  width: 200px;
+}
+
+.bubble3 {
+  position: absolute;
+  top: 40px;
+  left: 20%;
+  width: 300px;
+}
+
+.bubble4 {
+  position: absolute;
+  top: 200px;
+  left: 40%;
+  width: 400px;
+}
