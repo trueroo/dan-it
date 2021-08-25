@@ -1,0 +1,26 @@
+.block {
+  font-size: 20px;
+}
+
+.image {
+  width: 400px;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.block::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.block:nth-child(even) .image {
+  background-color: orange;
+  margin-left: 20px;
+  margin-right: 0;
+  float: right;
+}
+
+.text {
+  color: red;
+}

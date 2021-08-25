@@ -8,4 +8,4 @@
 - Нужно предусмотреть, что текст на вкладках может меняться, и что вкладки могут добавляться и удаляться. При этом нужно, чтобы функция, написанная в джаваскрипте, из-за таких правок не переставала работать.
 
 #### Литература:
-- [HTMLElement.dataset](https://developer.mozilla.org/ru/docs/Web/API/HTMLElement/dataset)
+- [Use_data_attributes](https://developer.mozilla.org/ru/docs/Learn/HTML/Howto/Use_data_attributes)

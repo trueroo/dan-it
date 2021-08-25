@@ -1,0 +1,49 @@
+.menu {
+  position: relative;
+  padding: 15px 20px;
+  background: green;
+  color: white;
+  display: inline-block;
+}
+ .menu::after  {
+   display: none;
+   position: absolute;
+   content: '';
+   height: 10px;
+   
+   width: 150px;
+   /* background: yellow; */
+   left: 0;
+   top: 100%;
+ }
+
+ .menu:hover::after {
+   display: block;
+ }
+.drop-down {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  border: solid 2px black;
+  width: 150px;
+  display: none;
+  background: white;
+  z-index: 2;
+}
+
+
+.drop-down-item {
+  margin-bottom: 1px;
+  color: gray;
+  padding: 15px  0;
+}
+
+.menu:hover .drop-down {
+  display: block;
+}
+
+
+
+.drop-down:hover {
+  display: block;
+}

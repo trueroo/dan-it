@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+  <form action="/user">
+  <table class="table">
+    <tr>
+      <th class="cell">Control Type</th>
+      <th class="cell">Data</th>
+      <th class="cell">Control</th>
+    </tr>
+    <tr> 
+      <td class="cell">text box</td>
+      <td class="cell">name</td>
+      <td class="cell"><input name="name" placeholder="enter name" type="text"></td>
+   </tr>
+
+    <tr>
+      <td class="cell"></td>
+      <td class="cell"></td>
+      <td class="cell"><input name="password" type="password"></td>
+    </tr>
+
+    <tr>
+      <td class="cell"></td>
+      <td class="cell"></td>
+      <td class="cell"> 
+        <input name="hobbie1" value="sport" type="checkbox">sport <br>
+        <input name="hobbie2" value="reading" type="checkbox">reading <br>
+        <input name="hobbie3" value="tv" type="checkbox">TV <br>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="cell"></td>
+      <td class="cell"></td>
+      <td class="cell">
+        <label>
+          <input name="gender" value="male" type="radio"> male 
+        </label><br>
+        <input id="gender-female" name="gender" value="female" type="radio">
+        <label for="gender-female">female</label>
+
+      </td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr>
+      <td class="cell"></td>
+      <td class="cell"></td>
+      <td class="cell">
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
+        <button>button</button>
+     </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

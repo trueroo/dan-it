@@ -1,0 +1,25 @@
+.main {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.item-wrapper {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-img {
+  max-width: 288px;
+}
+
+.description {
+  transition: opacity 500ms;
+}
+
+.description-hidden {
+  opacity: 0;
+}

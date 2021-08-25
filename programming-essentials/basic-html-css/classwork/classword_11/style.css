@@ -1,0 +1,9 @@
+.block-1, .block-2 {
+  width: 320px; height: 320px;
+  background-image: url('css_sprites.png');
+  
+}
+
+.block-2 {
+  background-position: -350px;
+}
