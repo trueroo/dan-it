@@ -11,13 +11,19 @@ const buildSass = function() {
       .pipe(browserSync.stream());
 }
 
+const copyHtml = function () {
+  return gulp.src("src/**/*.html")
+    .pipe(gulp.dest("./dist"))
+}
+
 gulp.task('serve', function() {
   browserSync.init({
-      server: "./"
+      server: "./dist"
   });
 
   gulp.watch("src/**/*.scss", buildSass);
-  gulp.watch("index.html").on('change', browserSync.reload);
+  gulp.watch("./src/*.html").on('change', browserSync.reload);
+  gulp.watch("./src/*.html", copyHtml);
 });
 
 // Compile sass into CSS & auto-inject into browsers
