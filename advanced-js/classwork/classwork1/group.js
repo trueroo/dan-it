@@ -5,10 +5,7 @@ function Group(name, id) {
   this.name = name;
   this.element = null;
   this.id = id;
-  this.remove = () => {
-    console.log();
-    this.element.remove()
-  }
+  this.list = groupList;
 
   this.render = function() {
     const list = document.querySelector(".js-group-list");
@@ -21,11 +18,11 @@ function Group(name, id) {
     removeBtn.innerHTML = "Delete";
     listItem.appendChild(removeBtn);
 
-    removeBtn.addEventListener("click", this.remove);
+    removeBtn.addEventListener("click", this.remove.bind(this));
 
-    console.log(this);
   }
 }
+Group.prototype = new Entity();
 
 const addGroupBtn = document.querySelector(".js-add-group-btn");
 addGroupBtn.addEventListener("click", function() {

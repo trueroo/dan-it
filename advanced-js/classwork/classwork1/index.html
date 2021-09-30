@@ -8,17 +8,46 @@
   <title>Document</title>
 </head>
 <body>
+
   <section class="container">
     <div class="mb-3">
+      <h2>Groups</h2>
       <label for="groupName" class="form-label">Group name</label>
       <input type="text" class="form-control js-group-name-input" id="groupName" aria-describedby="emailHelp">
     </div>
     <button type="submit" class="btn btn-primary js-add-group-btn">Submit</button>
+    <ul class="js-group-list">
+    </ul>
   </section>
+  <section class="container">
+    <div class="mb-3">
+      <h2>Students</h2>
+      <label for="studentFirstName" class="form-label">First name</label>
+      <input type="text" class="form-control js-student-first-name-input" id="studentFirstName" aria-describedby="emailHelp">
+      <label for="studentLastName" class="form-label">Last name</label>
+      <input type="text" class="form-control js-student-last-name-input" id="studentLastName" aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn btn-primary js-add-student-btn">Submit</button>
+    <ul class="js-student-list">
+    </ul>
+  </section>
+  <section class="container">
+    <div class="mb-3">
+      <h2>Teacher</h2>
+      <label for="teacherFirstName" class="form-label">First name</label>
+      <input type="text" class="form-control js-teacher-first-name-input" id="teacherFirstName" aria-describedby="emailHelp">
+      <label for="teacherLastName" class="form-label">Last name</label>
+      <input type="text" class="form-control js-teacher-last-name-input" id="teacherLastName" aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn btn-primary js-add-teacher-btn">Submit</button>
+    <ul class="js-teacher-list">
+    </ul>
+  </section>
+  
 
-  <ul class="js-group-list">
-  </ul>
-
-  <script src="./script.js"></script>
+  <script src="./person.js"></script>
+  <script src="./group.js"></script>
+  <script src="./student.js"></script>
+  <script src="./teacher.js"></script>
 </body>
 </html>
