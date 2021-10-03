@@ -1,0 +1,27 @@
+const teacherList = [];
+
+function TeachersCollection () {
+  this.addTeacher = function () {
+    const teacherId = teacherList.length + 1;
+    const teacherFirstName = document.querySelector(".js-teacher-first-name-input").value;
+    const teacherLastName = document.querySelector(".js-teacher-last-name-input").value;
+    const teacher = new Teacher(teacherFirstName, teacherLastName, teacherId);
+    teacherList.push(teacher);
+    teacher.render();
+    this.syncCollection();
+  }
+  this.syncCollection = function () {
+    localStorage.setItem('teachersCollection', JSON.stringify({ teacherList }));
+  }
+  this.removeTeacher = function (id) {
+    const selfIndex = teacherList.findIndex((person) => {
+      return person.id === id;
+    });
+    teacherList.splice(selfIndex, 1);
+    this.syncCollection();
+  }
+}
+const teachersCollection = new TeachersCollection();
+
+const addTeacherBtn = document.querySelector(".js-add-teacher-btn");
+addTeacherBtn.addEventListener("click", teachersCollection.addTeacher.bind(teachersCollection));

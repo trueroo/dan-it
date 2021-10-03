@@ -19,7 +19,6 @@ function Group(name, id) {
     listItem.appendChild(removeBtn);
 
     removeBtn.addEventListener("click", this.remove.bind(this));
-
   }
 }
 Group.prototype = new Entity();

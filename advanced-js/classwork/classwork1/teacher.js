@@ -1,23 +1,27 @@
-const teacherList = [];
-
 function Teacher(firstName, lastName, id) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.element = null;
   this.id = id;
-  this.list = teacherList;
+  // this.list = teacherList;
   this.listElement = document.querySelector(".js-teacher-list");
+
+  this.remove = function() {
+    this.element.remove();
+    teachersCollection.removeTeacher(this.id);
+  }
+
+  this.render = function() {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = this.firstName + ' ' + this.lastName;
+    this.listElement.appendChild(listItem);
+    this.element = listItem;
+
+    const removeBtn = document.createElement("button");
+    removeBtn.innerHTML = "Delete";
+    listItem.appendChild(removeBtn);
+
+    removeBtn.addEventListener("click", this.remove.bind(this));
+  }
 }
-Teacher.prototype = new Entity();
-
-const addTeacherBtn = document.querySelector(".js-add-teacher-btn");
-addTeacherBtn.addEventListener("click", function() {
-  const teacherId = teacherList.length + 1;
-  const teacherFirstName = document.querySelector(".js-teacher-first-name-input").value;
-  const teacherLastName = document.querySelector(".js-teacher-last-name-input").value;
-  const teacher = new Teacher(teacherFirstName, teacherLastName, teacherId);
-  teacherList.push(teacher);
-  teacher.render();
-});
-
-
+// Teacher.prototype = new Entity();

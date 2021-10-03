@@ -1,11 +1,6 @@
 function Entity() {
   this.remove = function() {
     this.element.remove();
-    const selfIndex = this.list.findIndex((person) => {
-      return person.id === this.id;
-    });
-
-    this.list.splice(selfIndex, 1);
   }
 
   this.render = function() {
