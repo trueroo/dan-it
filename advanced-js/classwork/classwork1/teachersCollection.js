@@ -11,7 +11,17 @@ function TeachersCollection () {
     this.syncCollection();
   }
   this.syncCollection = function () {
-    localStorage.setItem('teachersCollection', JSON.stringify({ teacherList }));
+    const teacherListToSave = teacherList.map((teacher) => {
+      const firstName = teacher.firstName;
+      const lastName = teacher.lastName;
+      const id = teacher.id;
+
+      return { firstName, lastName, id };
+    });
+
+    localStorage.setItem('teachersCollection', JSON.stringify({ 
+      teacherList: teacherListToSave
+    }));
   }
   this.getCollection = function () {
     try {
