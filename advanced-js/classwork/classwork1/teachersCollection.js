@@ -13,6 +13,22 @@ function TeachersCollection () {
   this.syncCollection = function () {
     localStorage.setItem('teachersCollection', JSON.stringify({ teacherList }));
   }
+  this.getCollection = function () {
+    try {
+      const collectionFromLS = JSON.parse(localStorage.getItem('teachersCollection'));
+      collectionFromLS.teacherList.forEach(element => {
+        const teacherFirstName = element.firstName;
+        const teacherLastName = element.lastName;
+        const teacherId = element.id;
+        const teacher = new Teacher(teacherFirstName, teacherLastName, teacherId);
+  
+        teacherList.push(teacher);
+        teacher.render();
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
   this.removeTeacher = function (id) {
     const selfIndex = teacherList.findIndex((person) => {
       return person.id === id;
@@ -22,6 +38,7 @@ function TeachersCollection () {
   }
 }
 const teachersCollection = new TeachersCollection();
+teachersCollection.getCollection();
 
 const addTeacherBtn = document.querySelector(".js-add-teacher-btn");
 addTeacherBtn.addEventListener("click", teachersCollection.addTeacher.bind(teachersCollection));
