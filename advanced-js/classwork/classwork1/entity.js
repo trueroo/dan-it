@@ -1,8 +1,4 @@
 function Entity() {
-  this.remove = function() {
-    this.element.remove();
-  }
-
   this.render = function() {
     const listItem = document.createElement("li");
     listItem.innerHTML = this.firstName + ' ' + this.lastName;
@@ -14,5 +10,11 @@ function Entity() {
     listItem.appendChild(removeBtn);
 
     removeBtn.addEventListener("click", this.remove.bind(this));
+  }
+
+
+  this.remove = function() {
+    this.element.remove();
+    this.collection.removeById(this.id);
   }
 }

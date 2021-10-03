@@ -29,7 +29,7 @@ function TeachersCollection () {
       console.log(error);
     }
   }
-  this.removeTeacher = function (id) {
+  this.removeById = function (id) {
     const selfIndex = teacherList.findIndex((person) => {
       return person.id === id;
     });
@@ -37,6 +37,7 @@ function TeachersCollection () {
     this.syncCollection();
   }
 }
+
 const teachersCollection = new TeachersCollection();
 teachersCollection.getCollection();
 
